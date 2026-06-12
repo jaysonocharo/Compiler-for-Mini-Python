@@ -6,7 +6,7 @@ TOKEN_SPECIFICATION = [
     ('STRING',   r'"(?:\\.|[^"\\])*"'),    # String literal [cite: 21, 77]
     ('NUMBER',   r'\d+'),                  # Integer numbers [cite: 21, 77]
     ('ID',       r'[a-zA-Z_][a-zA-Z0-9_]*'), # Identifiers [cite: 21, 76]
-    ('OP_PUNCT', r'==|>=|<=|[=+\-*/<>\:\(\)]'),     # Operators and Punctuation [cite: 21, 77]
+    ('OP_PUNCT', r'[=+\-*/<>\:\(\)]'),     # Operators and Punctuation [cite: 21, 77]
     ('MISMATCH', r'.')                     # Catch-all for unexpected characters
 ]
 

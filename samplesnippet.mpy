@@ -1,8 +1,2 @@
-limit = 5
-sum = 0
-while limit < 10:
-    sum = sum + limit
-    limit = limit + 1
-if sum <= 20:
-    print("Done\n")
-    
+while x * 30 < 58:
+        x = x * x

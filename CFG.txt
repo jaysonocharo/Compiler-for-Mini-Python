@@ -1,0 +1,26 @@
+CFG
+<program> ::= <statement_list>
+<statement_list> ::= <statement> <statement_list_tail>
+<statement_list_tail> ::= <statement_list> | ε
+
+<statement> ::= <simple_stmt> | <compound_stmt>
+<simple_stmt> ::= <assignment> | <print_stmt> | <return_stmt>
+<return_stmt> ::= "return" <expression> "NEWLINE" | "return" "NEWLINE"
+
+<assignment> ::= "ID" "=" <expression> "NEWLINE"
+<print_stmt> ::= "print" "(" <expression> ")" "NEWLINE"
+
+<compound_stmt> ::= <if_stmt> | <while_stmt>
+<if_stmt> ::= "if" <condition> ":" "NEWLINE" "INDENT" <statement_list> "DEDENT"
+<while_stmt> ::= "while" <condition> ":" "NEWLINE" "INDENT" <statement_list> "DEDENT"
+
+<condition> ::= <expression> <rel_op> <expression>
+
+<expression> ::= <term> <expression_tail>
+<expression_tail> ::= <arith_op> <expression> | ε
+
+<term> ::= "ID" | "NUMBER" | "STRING"
+<rel_op> ::= "<" | ">"
+<arith_op> ::= "+" | "-" | "*" | "/"
+
+ 
